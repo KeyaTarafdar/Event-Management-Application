@@ -1,7 +1,7 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { loginUser, loginVenue, loginAdmin } from "../utils/utils";
-import Loader from "../Components/loader";
+import Loader from "../Components/Loader";
 
 const Login = () => {
   const navigate = useNavigate();
