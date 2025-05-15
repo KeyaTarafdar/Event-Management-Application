@@ -9,7 +9,6 @@ export const fetchCompanyDetails = async () => {
     let response = await axios.get(
       "https://event-management-application-5hs8.onrender.com/fetchcompanydetails",
     );
-    console.log('response', response)
     return response;
   } catch (err) {
     console.log(err.message);
@@ -47,9 +46,6 @@ export const signUp = async (
         contactNumber,
         password,
         agreeToTerms,
-      },
-      {
-        withCredentials: true,
       }
     );
     return response.data;
