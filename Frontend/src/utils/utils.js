@@ -8,8 +8,8 @@ export const fetchCompanyDetails = async () => {
   try {
     let response = await axios.get(
       "https://event-management-application-5hs8.onrender.com/fetchcompanydetails",
-      { withCredentials: true }
     );
+    console.log('response', response)
     return response;
   } catch (err) {
     console.log(err.message);
