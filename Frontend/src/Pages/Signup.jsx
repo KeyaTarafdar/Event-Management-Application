@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { FaGoogle, FaFacebook } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { signUp } from "../utils/utils";
-import Loader from "../Components/loader";
+import Loader from "../Components/Loader";
 
 const Signup = () => {
   const navigate = useNavigate();
