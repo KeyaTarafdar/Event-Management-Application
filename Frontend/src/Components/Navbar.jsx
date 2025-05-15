@@ -19,7 +19,7 @@ import {
   findAdmin,
   fetchCompanyDetails,
 } from "../utils/utils";
-import Loader from "./loader";
+import Loader from "./Loader";
 
 export default function Navbar({ menuItems }) {
   const navigate = useNavigate();
