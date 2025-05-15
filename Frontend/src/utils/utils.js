@@ -7,7 +7,7 @@ import axios from "axios";
 export const fetchCompanyDetails = async () => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/fetchcompanydetails",
+      "https://event-management-application-5hs8.onrender.com/fetchcompanydetails",
       { withCredentials: true }
     );
     return response;
@@ -19,7 +19,7 @@ export const fetchCompanyDetails = async () => {
 // Logout
 export const logoutUser = async () => {
   try {
-    let response = await axios.get("http://localhost:8000/commonroute/logout", {
+    let response = await axios.get("https://event-management-application-5hs8.onrender.com/commonroute/logout", {
       withCredentials: true,
     });
     return response.data;
@@ -40,7 +40,7 @@ export const signUp = async (
 ) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/users/signup",
+      "https://event-management-application-5hs8.onrender.com/users/signup",
       {
         userName,
         email,
@@ -62,7 +62,7 @@ export const signUp = async (
 export const loginUser = async (email, password) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/users/login",
+      "https://event-management-application-5hs8.onrender.com/users/login",
       { email, password },
       { withCredentials: true }
     );
@@ -76,7 +76,7 @@ export const loginUser = async (email, password) => {
 export const uploadProfilePicture = async (imageData) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/users/uploadprofilepicture",
+      "https://event-management-application-5hs8.onrender.com/users/uploadprofilepicture",
       { image: imageData },
       {
         withCredentials: true,
@@ -92,7 +92,7 @@ export const uploadProfilePicture = async (imageData) => {
 export const changePasswordRequest = async (email) => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/users/updatepasswordrequest",
+      "https://event-management-application-5hs8.onrender.com/users/updatepasswordrequest",
       { email }
     );
     return response.data;
@@ -105,7 +105,7 @@ export const changePasswordRequest = async (email) => {
 export const changePassword = async (email, password) => {
   try {
     let response = await axios.put(
-      "http://localhost:8000/users/updatepassword",
+      "https://event-management-application-5hs8.onrender.com/users/updatepassword",
       { email, password }
     );
     return response.data;
@@ -118,7 +118,7 @@ export const changePassword = async (email, password) => {
 export const changePasswordVenue = async (venueId, password) => {
   try {
     let response = await axios.put(
-      "http://localhost:8000/venue/updatepasswordfirsttime",
+      "https://event-management-application-5hs8.onrender.com/venue/updatepasswordfirsttime",
       { venueId, password }
     );
     return response.data;
@@ -130,7 +130,7 @@ export const changePasswordVenue = async (venueId, password) => {
 // Find user
 export const findUser = async () => {
   try {
-    let response = await axios.get("http://localhost:8000/users/getuser", {
+    let response = await axios.get("https://event-management-application-5hs8.onrender.com/users/getuser", {
       withCredentials: true,
     });
     if (response.data) {
@@ -147,7 +147,7 @@ export const findUser = async () => {
 export const createEvent = async (formData) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/users/createevent",
+      "https://event-management-application-5hs8.onrender.com/users/createevent",
       { formData },
       { withCredentials: true }
     );
@@ -162,7 +162,7 @@ export const createEvent = async (formData) => {
 export const fetchAllVenues = async () => {
   try {
     const response = await axios.get(
-      "http://localhost:8000/users/getallvenue",
+      "https://event-management-application-5hs8.onrender.com/users/getallvenue",
       { withCredentials: true }
     );
 
@@ -176,7 +176,7 @@ export const fetchAllVenues = async () => {
 export const fetchVirtualEvents = async () => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/users/fetchallvirtualevents",
+      "https://event-management-application-5hs8.onrender.com/users/fetchallvirtualevents",
       {
         withCredentials: true,
       }
@@ -191,7 +191,7 @@ export const fetchVirtualEvents = async () => {
 export const fetchIn_PersonEvents = async () => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/users/fetchallin_personvents",
+      "https://event-management-application-5hs8.onrender.com/users/fetchallin_personvents",
       {
         withCredentials: true,
       }
@@ -206,7 +206,7 @@ export const fetchIn_PersonEvents = async () => {
 export const fetchHybridEvents = async () => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/users/fetchallhyybridevents",
+      "https://event-management-application-5hs8.onrender.com/users/fetchallhyybridevents",
       {
         withCredentials: true,
       }
@@ -221,7 +221,7 @@ export const fetchHybridEvents = async () => {
 export const fetchSingleEvent = async (eventId) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/users/fetchsingleevent",
+      "https://event-management-application-5hs8.onrender.com/users/fetchsingleevent",
       { eventId }
     );
     return response.data;
@@ -234,7 +234,7 @@ export const fetchSingleEvent = async (eventId) => {
 export const fetchLastCreatedEvent = async () => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/users/fetchlastcreatedevent"
+      "https://event-management-application-5hs8.onrender.com/users/fetchlastcreatedevent"
     );
     return response.data;
   } catch (err) {
@@ -246,7 +246,7 @@ export const fetchLastCreatedEvent = async () => {
 export const eventRegistration = async (eventId) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/users/eventregistration",
+      "https://event-management-application-5hs8.onrender.com/users/eventregistration",
       { eventId },
       {
         withCredentials: true,
@@ -263,7 +263,7 @@ export const eventRegistration = async (eventId) => {
 export const checkUserIsRegisteredInEventOrNot = async (eventId) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/users/checkuserisregisteredineventornot",
+      "https://event-management-application-5hs8.onrender.com/users/checkuserisregisteredineventornot",
       { eventId },
       {
         withCredentials: true,
@@ -281,7 +281,7 @@ export const checkUserIsRegisteredInEventOrNot = async (eventId) => {
 export const loginVenue = async (email, password) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/venue/login",
+      "https://event-management-application-5hs8.onrender.com/venue/login",
       { email, password },
       { withCredentials: true }
     );
@@ -295,7 +295,7 @@ export const loginVenue = async (email, password) => {
 export const findVenue = async () => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/venue/fetchvenueuser",
+      "https://event-management-application-5hs8.onrender.com/venue/fetchvenueuser",
       { withCredentials: true }
     );
     return response.data;
@@ -308,7 +308,7 @@ export const findVenue = async () => {
 export const uploadVenueProfilePicture = async (imageData) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/uploadvenueprofilepicture",
+      "https://event-management-application-5hs8.onrender.com/venue/uploadvenueprofilepicture",
       { image: imageData },
       {
         withCredentials: true,
@@ -323,7 +323,7 @@ export const uploadVenueProfilePicture = async (imageData) => {
 // Register Venue
 export const registerVenue = async (formData) => {
   try {
-    const response = await axios.post("http://localhost:8000/venue/signup", {
+    const response = await axios.post("https://event-management-application-5hs8.onrender.com/venue/signup", {
       formData,
     });
 
@@ -337,7 +337,7 @@ export const registerVenue = async (formData) => {
 export const updateVenueName = async (newHallName) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/updatehallname",
+      "https://event-management-application-5hs8.onrender.com/venue/updatehallname",
       { newHallName },
       { withCredentials: true }
     );
@@ -351,7 +351,7 @@ export const updateVenueName = async (newHallName) => {
 export const updateVenueCity = async (newHallCity) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/updatehallcity",
+      "https://event-management-application-5hs8.onrender.com/venue/updatehallcity",
       { newHallCity },
       { withCredentials: true }
     );
@@ -365,7 +365,7 @@ export const updateVenueCity = async (newHallCity) => {
 export const updateVenueEmail = async (newHallEmail) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/updatehallemail",
+      "https://event-management-application-5hs8.onrender.com/venue/updatehallemail",
       { newHallEmail },
       { withCredentials: true }
     );
@@ -379,7 +379,7 @@ export const updateVenueEmail = async (newHallEmail) => {
 export const updateVenuePhone = async (newHallPhone) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/updatehallphone",
+      "https://event-management-application-5hs8.onrender.com/venue/updatehallphone",
       { newHallPhone },
       { withCredentials: true }
     );
@@ -393,7 +393,7 @@ export const updateVenuePhone = async (newHallPhone) => {
 export const updateVenueAddress = async (newHallAddress) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/updatehalladdress",
+      "https://event-management-application-5hs8.onrender.com/venue/updatehalladdress",
       { newHallAddress },
       { withCredentials: true }
     );
@@ -407,7 +407,7 @@ export const updateVenueAddress = async (newHallAddress) => {
 export const updateVenueCapacity = async (newHallCapacity) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/updatehallcapacity",
+      "https://event-management-application-5hs8.onrender.com/venue/updatehallcapacity",
       { newHallCapacity },
       { withCredentials: true }
     );
@@ -421,7 +421,7 @@ export const updateVenueCapacity = async (newHallCapacity) => {
 export const updateVenueMultidayEvent = async (newHallMultiday) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/venue/updatehallmultiday",
+      "https://event-management-application-5hs8.onrender.com/venue/updatehallmultiday",
       { newHallMultiday },
       { withCredentials: true }
     );
@@ -437,7 +437,7 @@ export const updateVenueMultidayEvent = async (newHallMultiday) => {
 export const loginAdmin = async (email, password) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/admins/login",
+      "https://event-management-application-5hs8.onrender.com/admins/login",
       { email, password },
       { withCredentials: true }
     );
@@ -450,7 +450,7 @@ export const loginAdmin = async (email, password) => {
 // Find Admin
 export const findAdmin = async () => {
   try {
-    let response = await axios.get("http://localhost:8000/admins/fetchadmin", {
+    let response = await axios.get("https://event-management-application-5hs8.onrender.com/admins/fetchadmin", {
       withCredentials: true,
     });
     return response.data;
@@ -463,7 +463,7 @@ export const findAdmin = async () => {
 export const uploadProfilePictureAdmin = async (imageData) => {
   try {
     const response = await axios.post(
-      "http://localhost:8000/admins/uploadprofilepicture",
+      "https://event-management-application-5hs8.onrender.com/admins/uploadprofilepicture",
       { image: imageData },
       {
         withCredentials: true,
@@ -479,7 +479,7 @@ export const uploadProfilePictureAdmin = async (imageData) => {
 export const acceptVenue = async (venueId) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/admins/acceptvenue",
+      "https://event-management-application-5hs8.onrender.com/admins/acceptvenue",
       { venueId },
       { withCredentials: true }
     );
@@ -493,7 +493,7 @@ export const acceptVenue = async (venueId) => {
 export const rejectVenue = async (venueId, reason) => {
   try {
     let response = await axios.post(
-      "http://localhost:8000/admins/rejectvenue",
+      "https://event-management-application-5hs8.onrender.com/admins/rejectvenue",
       { venueId, reason },
       { withCredentials: true }
     );
@@ -507,7 +507,7 @@ export const rejectVenue = async (venueId, reason) => {
 export const fetchAllEvents = async () => {
   try {
     let response = await axios.get(
-      "http://localhost:8000/admins/fetchallvenue",
+      "https://event-management-application-5hs8.onrender.com/admins/fetchallvenue",
       {
         withCredentials: true,
       }
