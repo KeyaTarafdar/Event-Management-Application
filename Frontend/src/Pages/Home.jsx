@@ -75,6 +75,7 @@ export default function Home() {
     });
 
     fetchCompanyDetails().then((response) => {
+      console.log('response', response)
       if (response.status === 200) {
         setCompany(response.data);
         setfetchingCompleted(true);
