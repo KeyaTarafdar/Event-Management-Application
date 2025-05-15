@@ -4,12 +4,14 @@ const userModel = require("../models/userModel");
 module.exports = async (req, res, next) => {
   try {
     let token = req.cookies.token;
+    console.log('token', token)
     
     if (token) {
       let decode = jwt.verify(token, process.env.JWT_KEY);
       let user = await userModel
         .findOne({ email: decode.email })
         .select("-password");
+        console.log('user', user)
       if (user) {
         req.user = user;
         next();

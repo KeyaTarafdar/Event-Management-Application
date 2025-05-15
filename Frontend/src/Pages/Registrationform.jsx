@@ -27,7 +27,7 @@ const Registrationform = () => {
     try {
       if(formdata.Pay){
       const { data } = await axios.post(
-      "https://event-management-application-5hs8.onrender.com/users/create-order",
+      "http://localhost:8000/users/create-order",
       {
         amount: Number(formdata.payAmount),
         currency: "INR",
@@ -46,7 +46,7 @@ const Registrationform = () => {
       order_id: data.order.id,
       handler: async (response) => {
         let verifyResponse = await axios.post(
-          "https://event-management-application-5hs8.onrender.com/users/verify-payment",
+          "http://localhost:8000/users/verify-payment",
           {
             razorpay_order_id: response.razorpay_order_id,
             razorpay_payment_id: response.razorpay_payment_id,

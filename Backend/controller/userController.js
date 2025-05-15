@@ -29,8 +29,10 @@ module.exports.signUp = async (req, res) => {
   try {
     let { email, password, userName, contactNumber, agreeToTerms } = req.body;
 
+    console.log('email', email)
     if (email && password && userName && contactNumber && agreeToTerms) {
       const existingUser = await userModel.findOne({ email });
+      console.log('existingUser', existingUser)
       if (existingUser) {
         return res.send("User already exists. Please Login.");
       }
@@ -62,15 +64,19 @@ module.exports.signUp = async (req, res) => {
 
 // Login
 module.exports.loginUser = async (req, res) => {
+  console.log("login")
   try {
     let token = req.cookies.token;
+    console.log('token', token)
     if (token) {
       res.send("You are already logged in.");
     } else {
       let { email, password } = req.body;
 
+      console.log('email', email)
       if (email && password) {
         let user = await userModel.findOne({ email });
+        console.log('user', user)
 
         if (user) {
           bcrypt.compare(password, user.password, async (err, result) => {

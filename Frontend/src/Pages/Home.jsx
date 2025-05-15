@@ -254,7 +254,7 @@ export default function Home() {
       </div>
 
       {/* Get Started-------------------------------------------------------------------------------- */}
-      <div className="flex flex-col items-center pt-20 w-[50%] sm:w-[40%] md:w-[45%] lg:w-[44%] xl:w-[36%] 2xl:w-[40%] text-center m-auto">
+      <div className="flex flex-col items-center pt-20 w-[70%] sm:w-[40%] md:w-[45%] lg:w-[44%] xl:w-[36%] 2xl:w-[40%] text-center m-auto">
         <div className="2xl:text-6xl xl:text-5xl lg:text-4xl md:text-3xl sm:text-2xl text-2xl font-sans font-bold">
           Elevate your Events, elevate Our brand
         </div>
