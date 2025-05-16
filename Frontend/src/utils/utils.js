@@ -57,7 +57,6 @@ export const signUp = async (
 // User Login
 export const loginUser = async (email, password) => {
   try {
-    alert("login")
     let response = await axios.post(
       "https://event-management-application-5hs8.onrender.com/users/login",
       { email, password },
@@ -127,7 +126,6 @@ export const changePasswordVenue = async (venueId, password) => {
 // Find user
 export const findUser = async () => {
   try {
-    alert("finduser")
     let response = await axios.get("https://event-management-application-5hs8.onrender.com/users/getuser", {
       withCredentials: true,
     });
