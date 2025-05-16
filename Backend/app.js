@@ -12,7 +12,7 @@ require("./config/mongoose-connection");
 const app = express();
 
 app.use(
-  cors()
+  cors("https://event-management-application-5hs8.onrender.com")
 );
 
 app.use(express.json());
