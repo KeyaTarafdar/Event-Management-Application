@@ -7,7 +7,7 @@ import axios from "axios";
 export const fetchCompanyDetails = async () => {
   try {
     let response = await axios.get(
-      "https://event-management-application-5hs8.onrender.com/fetchcompanydetails",{withCredentials:true}
+      "https://event-management-application-5hs8.onrender.com/fetchcompanydetails"
     );
     return response;
   } catch (err) {
